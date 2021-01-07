@@ -3,7 +3,8 @@ const $now = document.getElementById('now');
 const $newYear = document.getElementById('countDown')
 console.log($newYear);
 const startTime = Date.now('countDown');
-const nextYear = new Date(2021,0,1,0,0,0);
+const nextYear = new Date(new Date().getFullYear() + 1,0,1,0,0,0);
+
 
 let goal = nextYear.getTime();
 console.log(goal);
@@ -32,7 +33,7 @@ function updateNow() {
             + Math.floor(dHour) + "時間"
             + Math.floor(dMin) + "分"
             + Math.floor(dSec) + "秒";
-    console.log(msg2);
+    // console.log(msg2);
     $newYear.innerText = msg2;
 }
 
